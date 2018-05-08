@@ -37,6 +37,7 @@ export default {
                 'node_modules/react/**',
                 'node_modules/react-dom/**',
                 'node_modules/prop-types/**',
+				'node_modules/reactstrap/**',
             ],
         }),
         replace({
