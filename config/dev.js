@@ -37,8 +37,15 @@ export default {
                 'node_modules/react/**',
                 'node_modules/react-dom/**',
                 'node_modules/prop-types/**',
-				'node_modules/reactstrap/**',
+                'node_modules/lodash.isfunction/**',
+                'node_modules/classnames/**',
+                'node_modules/lodash.isobject/**',
+                'node_modules/lodash.tonumber/index.js',
+                'node_modules/reactstrap/**',
             ],
+            namedExports: {
+                'node_modules/react/index.js': [ 'Component', 'createElement' ],
+            }
         }),
         replace({
             'process.env.NODE_ENV': JSON.stringify('development'),

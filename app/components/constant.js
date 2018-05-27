@@ -13,7 +13,8 @@ import {
   DropdownMenu,
   DropdownItem } from 'reactstrap';
 
-export class NaviBar extends React.Component {
+
+export default class NaviApp extends React.Component {
   constructor(props) {
     super(props);
 
@@ -26,35 +27,35 @@ export class NaviBar extends React.Component {
     this.setState({
       isOpen: !this.state.isOpen
     });
-  }
+  };
+
   render() {
     return (
-      <div>
-        <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">reactstrap</NavbarBrand>
+
+      <div >
+        <Navbar color="secondary" dark expand="md">
+          <NavbarBrand href="/">Attendance System Portal</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Components</NavLink>
+                <NavLink href="/components/"><button className="btn">Login</button></NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-              </NavItem>
+
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
-                  Options
+                <button className="btn">Register</button>
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    Option 1
+                    Student
                   </DropdownItem>
                   <DropdownItem>
-                    Option 2
+                    Lecturer
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    Reset
+                    Forgot Password
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
